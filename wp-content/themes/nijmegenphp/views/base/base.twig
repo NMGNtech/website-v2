@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html {{ function('language_attributes') }}>
+<head>{% include 'base/header' %}</head>
+
+<body {{ body_class }}>
+<div id="page" class="site container-fluid">
+    <header id="masthead" class="site-header" role="banner">
+        {% include 'partials/menu.twig' %}
+    </header>
+
+    <section id="content" role="main" class="site-content">
+        <div class="row">
+            <div id="primary" class="col-xs-12 content-area">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>{{ title|default('Welcome to NijmegenPHP') }}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    {% block content %}
+                        Sorry, no content found
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% block footer %}
+    {% include 'base/footer.twig' %}
+    {{ function('wp_footer') }}
+{% endblock %}
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+{% block javascript %}{% endblock %}
+
+</body>
+</html>

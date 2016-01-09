@@ -1,0 +1,17 @@
+{% extends "base/base.twig" %}
+{% block content %}
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        {{ meetup['description'] }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div id="map" class="map-container col-xs-12 col-md-11"></div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            generateMap('map', {{ meetup['venue']['lat'] }}, {{ meetup['venue']['lon'] }});
+        });
+    </script>
+{% endblock %}
