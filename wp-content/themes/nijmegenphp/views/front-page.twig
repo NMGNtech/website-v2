@@ -1,10 +1,17 @@
-{% extends "base/base.twig" %}
+{% extends 'base/base.twig' %}
 {% block content %}
-    <div class="col-xs-12 col-sm-12 col-md-6">
-        {{ meetup['description'] }}
+
+    <div class="col-xs-12 col-sm-12 col-md-3">
+        Test
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6">
-        <div id="map" class="map-container col-xs-12 col-md-11"></div>
+    <div class="col-xs-12 col-sm-12 col-md-9">
+        <div class="row">
+            <h2>Upcoming meetup</h2>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                {{ meetup['description'] }}
+            </div>
+            <div id="map" class="map-container col-xs-6 col-md-5"></div>
+        </div>
     </div>
 {% endblock %}
 

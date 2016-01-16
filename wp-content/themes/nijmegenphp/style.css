@@ -371,6 +371,14 @@ body {
     padding: 20px 30px;
 }
 
+.main-navigation {
+    padding: 20px 30px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
 .site-footer {
     color: #fff;
     background: #41759d;

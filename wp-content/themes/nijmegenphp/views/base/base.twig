@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html {{ function('language_attributes') }}>
-<head>{% include 'base/header' %}</head>
+<head>{% include 'base/header.twig' %}</head>
 
 <body {{ body_class }}>
 <div id="page" class="site container-fluid">
@@ -26,11 +26,13 @@
     </section>
 </div>
 {% block footer %}
-    {% include 'base/footer.twig' %}
+    <footer id="colophon" role="contentinfo" class="footer">
+        <div class="container-fluid">
+
+        </div>
+    </footer>
     {{ function('wp_footer') }}
 {% endblock %}
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 {% block javascript %}{% endblock %}
 

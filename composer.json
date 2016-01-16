@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "dms/meetup-api-client": "^2.0",
+        "dms/meetup-api-client": "^2.0.1",
         "php": "^5.5"
     },
     "autoload": {

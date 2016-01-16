@@ -116,7 +116,6 @@ function nijmegenphp_scripts() {
     wp_enqueue_script( 'mapbox', '//api.mapbox.com/mapbox.js/v2.2.3/mapbox.js', array('jquery'), false, true );
     wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('jquery'), false, true );
 
-//    wp_localize_script( 'map', 'mapOptions', $mapData );
 }
 add_action( 'wp_enqueue_scripts', 'nijmegenphp_scripts' );
 
